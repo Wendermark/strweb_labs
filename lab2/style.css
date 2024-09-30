@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(126, 233, 199);
+    background-color: rgb(233, 217, 126);
     font-family: Arial, sans-serif;
 }
 
@@ -15,7 +15,6 @@ body{
   background-color: #f2f2f2;
 }
 
-
 h2{
   font-weight: bold;
 }
@@ -25,15 +24,15 @@ h2{
 }
 
 #movie1{
-    font-family: Teko;
+    font-family: Kaph;
 }
 
 #movie2{
-    font-family: Sofad;
+    font-family: Letov;
 }
 
 #movie3{
-    font-family: Edu;
+    font-family: Mister;
 }
 
 .container {
@@ -74,24 +73,24 @@ a{
 
 @font-face {
     
-    font-family: "Teko"; 
-    src: url("fonts/Teko-VariableFont_wght.ttf") format("truetype"); 
+    font-family: "Kaph"; 
+    src: url("fonts/ofont.ru_Kaph.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
   } 
 
 @font-face {
     
-    font-family: "Sofad"; 
-    src: url("fonts/SofadiOne-Regular.ttf") format("truetype"); 
+    font-family: "Letov"; 
+    src: url("fonts/ofont.ru_Letov.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
   } 
 
 @font-face {
     
-    font-family: "Edu"; 
-    src: url("fonts/EduAUVICWANTDots-VariableFont_wght.ttf") format("truetype"); 
+    font-family: "Mister"; 
+    src: url("fonts/ofont.ru_Mister Brush.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
   } 
