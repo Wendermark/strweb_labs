@@ -1,9 +1,6 @@
 body{
     background-color: rgb(233, 217, 126);
     font-family: Arial, sans-serif;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
 .movie-table {
@@ -24,6 +21,23 @@ h2{
 
 .movie {
   margin-bottom: 40px;
+}
+
+.container {
+  max-width: 1440px; 
+  /*max-height: 1080px;*/
+  width: 100%; /* Занимает 100% доступного пространства до максимальных размеров */
+  height: auto; /* Высота автоматически изменяется в зависимости от ширины */
+  box-shadow: 0 0 15px rgb(255, 0, 0); /* Тень для визуального эффекта */
+  margin: auto;
+}
+
+img{
+  width: 200px; 
+  height: 150px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 10px;
 }
 
 #movie1{
