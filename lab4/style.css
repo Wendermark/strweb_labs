@@ -60,7 +60,7 @@
     height: 50px;
     background-color: red;
     border-radius: 100%;
-    animation: bounce 10s linear infinite;
+    animation: bounce 4s linear infinite;
   }
   
 @keyframes bounce {
