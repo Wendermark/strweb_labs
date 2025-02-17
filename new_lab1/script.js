@@ -32,12 +32,12 @@ console.log(movieDict);
 function buildTable(moviesObject) {
   const tableContainer = document.getElementById('movieTable');
 
-  const table = document.createElement('table');
+  table = document.createElement('table');
 
-  const thead = document.createElement('thead');
-  const headerRow = document.createElement('tr');
-  const thFilm = document.createElement('th');
-  const thRating = document.createElement('th');
+  thead = document.createElement('thead');
+  headerRow = document.createElement('tr');
+  thFilm = document.createElement('th');
+  thRating = document.createElement('th');
 
   thFilm.textContent = 'Фильм';
   thRating.textContent = 'Оценка';
@@ -46,12 +46,12 @@ function buildTable(moviesObject) {
   thead.appendChild(headerRow);
   table.appendChild(thead);
 
-  const tbody = document.createElement('tbody');
+  tbody = document.createElement('tbody');
 
   for (const [film, rating] of Object.entries(moviesObject)) {
-    const row = document.createElement('tr');
-    const tdFilm = document.createElement('td');
-    const tdRating = document.createElement('td');
+    row = document.createElement('tr');
+    tdFilm = document.createElement('td');
+    tdRating = document.createElement('td');
 
     tdFilm.textContent = film;
     tdRating.textContent = rating;
@@ -61,7 +61,6 @@ function buildTable(moviesObject) {
   }
 
   table.appendChild(tbody);
-  
   tableContainer.appendChild(table);
 }
 
