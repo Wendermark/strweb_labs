@@ -4,14 +4,14 @@ while (numberOfFilms === '' || numberOfFilms === null || isNaN(numberOfFilms)) {
   numberOfFilms = prompt('Введите корректное количество просмотренных фильмов:', '');
 }
 
-const personalMovieDB = {
+const movieDict = {
   count: +numberOfFilms, 
   movies: {} 
 };
 
 for (let i = 0; i < numberOfFilms; i++) {
   let lastFilm = prompt('Один из последних просмотренных фильмов?', '');
-  while (lastFilm === '' || lastFilm === null || lastFilm.length > 50)
+  while (!lastFilm || lastFilm.length > 50)
   {
     alert('Некорректный ввод! Название фильма не должно быть пустым и длиннее 50 символов.');
     lastFilm = prompt('Один из последних просмотренных фильмов?', '');
@@ -19,17 +19,17 @@ for (let i = 0; i < numberOfFilms; i++) {
 
   let filmRating = prompt('На сколько оцените его?', '');
 
-  while (filmRating === '' || filmRating === null || isNaN(filmRating)) {
+  while (!filmRating || isNaN(filmRating)) {
     alert('Некорректный ввод! Оценка введена некорректно.');
     filmRating = prompt('На сколько оцените его?', '');
   }
 
-  personalMovieDB.movies[lastFilm] = filmRating;
+  movieDict.movies[lastFilm] = filmRating;
 }
 
-console.log(personalMovieDB);
+console.log(movieDict);
 
-function showMoviesTable(moviesObject) {
+function buildTable(moviesObject) {
   const tableContainer = document.getElementById('movieTable');
 
   const table = document.createElement('table');
@@ -61,7 +61,8 @@ function showMoviesTable(moviesObject) {
   }
 
   table.appendChild(tbody);
+  
   tableContainer.appendChild(table);
 }
 
-showMoviesTable(personalMovieDB.movies);
+buildTable(movieDict.movies);
