@@ -1,6 +1,6 @@
 let numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?', '');
 
-while (numberOfFilms === '' || numberOfFilms === null || isNaN(numberOfFilms)) {
+while (!numberOfFilms || isNaN(numberOfFilms)) {
   numberOfFilms = prompt('Введите корректное количество просмотренных фильмов:', '');
 }
 
@@ -48,7 +48,7 @@ function buildTable(moviesObject) {
 
   tbody = document.createElement('tbody');
 
-  for (const [film, rating] of Object.entries(moviesObject)) {
+  for ([film, rating] of Object.entries(moviesObject)) {
     row = document.createElement('tr');
     tdFilm = document.createElement('td');
     tdRating = document.createElement('td');
@@ -57,6 +57,7 @@ function buildTable(moviesObject) {
     tdRating.textContent = rating;
 
     row.append(tdFilm, tdRating);
+
     tbody.appendChild(row);
   }
 
